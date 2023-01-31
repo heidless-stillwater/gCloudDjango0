@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'gCloudDjango0.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'pfolioDB0',
+        'NAME': 'pfoliodb0',
         'USER': 'heidless',
         'PASSWORD': 'Havana11',
         'HOST': 'localhost',
