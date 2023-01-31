@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-ajzzdspv7p!1uqrk^%1)*nrkt%q3^aq_o&aw!$hhh)t8vya-6i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['35.246.28.100']
 
 # Application definition
 
@@ -73,14 +72,23 @@ WSGI_APPLICATION = 'gCloudDjango0.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': str(BASE_DIR / "db.sqlite3"),
+#    }
+#}
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(BASE_DIR / "db.sqlite3"),
-    }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'pfolioDB0',
+        'USER': 'heidless',
+        'PASSWORD': 'Havana11',
+        'HOST': 'localhost',
+        'PORT': '',
+    }     
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -118,7 +126,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+import os
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+# 'NAME': str(BASE_DIR / "db.sqlite3"),
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

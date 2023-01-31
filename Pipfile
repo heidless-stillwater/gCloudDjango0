@@ -18,6 +18,8 @@ requests = "==2.23.0"
 soupsieve = "==2.0"
 sqlparse = "==0.3.1"
 urllib3 = "==1.25.8"
+gunicorn = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
